@@ -35,6 +35,7 @@ export const locales = [
   "uk",
   "vi",
   "zh",
+  "fa"
 ] as const
 
 export const defaultLocale = "en" as const satisfies AppLocale
@@ -45,7 +46,7 @@ export type AppLocale = (typeof locales)[number]
  * Locales written right-to-left. Add new ones here only — every dir-aware
  * consumer (`<html dir>`, Radix roots, motion offsets) reads this.
  */
-export const rtlLocales = ["ar", "he"] as const satisfies readonly AppLocale[]
+export const rtlLocales = ["ar", "he", "fa"] as const satisfies readonly AppLocale[]
 
 export type LocaleDirection = "ltr" | "rtl"
 
@@ -94,6 +95,7 @@ export const localeLabels: Record<AppLocale, string> = {
   uk: "Українська",
   vi: "Tiếng Việt",
   zh: "中文",
+  fa: "فارسی"
 }
 
 export const appLocales: Locale[] = locales.map((code) => ({

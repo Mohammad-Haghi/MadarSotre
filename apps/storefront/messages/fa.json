@@ -1,0 +1,714 @@
+{
+  "AccountInfo": {
+    "cancel": "لغو",
+    "edit": "ویرایش",
+    "errorDefault": "ذخیره تغییر انجام نشد. لطفاً دوباره تلاش کنید.",
+    "saveChanges": "ذخیره تغییرات",
+    "updatedSuccessfully": "{label} با موفقیت به‌روزرسانی شد"
+  },
+  "AccountLayout": {
+    "customerService": "خدمات مشتریان",
+    "faqDescription": "می‌توانید پرسش‌های متداول و پاسخ آن‌ها را در صفحه خدمات مشتریان پیدا کنید.",
+    "gotQuestions": "پرسش‌ها و پاسخ‌ها"
+  },
+  "AccountNav": {
+    "account": "حساب کاربری",
+    "addresses": "نشانی‌ها",
+    "logOut": "خروج",
+    "orders": "سفارش‌ها",
+    "overview": "نمای کلی",
+    "profile": "پروفایل"
+  },
+  "AccountOverview": {
+    "addresses": "نشانی‌ها",
+    "completed": "تکمیل‌شده",
+    "hello": "سلام {name}",
+    "noRecentOrders": "سفارشی در فهرست اخیر وجود ندارد",
+    "profile": "پروفایل",
+    "recentOrders": "سفارش‌های اخیر",
+    "saved": "ذخیره‌شده",
+    "signedInAs": "واردشده با حساب:"
+  },
+  "AddressCard": {
+    "addAddress": "افزودن نشانی",
+    "default": "پیش‌فرض",
+    "editAddress": "ویرایش نشانی",
+    "newAddress": "نشانی جدید"
+  },
+  "AddressForm": {
+    "address": "نشانی",
+    "addressLine2": "واحد، آپارتمان و موارد مشابه",
+    "addressName": "نام",
+    "cancel": "لغو",
+    "city": "شهر",
+    "company": "شرکت",
+    "country": "کشور",
+    "edit": "ویرایش",
+    "firstName": "نام",
+    "lastName": "نام خانوادگی",
+    "phone": "تلفن",
+    "postalCode": "کد پستی",
+    "province": "استان / ایالت",
+    "remove": "حذف",
+    "save": "ذخیره",
+    "stateProvince": "استان"
+  },
+  "AddressesPage": {
+    "description": "نشانی‌های ارسال خود را مشاهده و ویرایش کنید و هر تعداد نشانی که می‌خواهید اضافه کنید. نشانی‌های ذخیره‌شده هنگام تسویه‌حساب در دسترس هستند.",
+    "heading": "نشانی‌های ارسال"
+  },
+  "Breadcrumb": {
+    "home": "خانه",
+    "store": "فروشگاه"
+  },
+  "Cart": {
+    "emptyMessage": "سبد خرید شما خالی است. برای مشاهده محصولات، از پیوند زیر استفاده کنید.",
+    "exploreProducts": "مشاهده محصولات",
+    "heading": "سبد خرید"
+  },
+  "CartDropdown": {
+    "bagEmpty": "سبد خرید شما خالی است.",
+    "exploreProducts": "مشاهده محصولات",
+    "goToCart": "رفتن به سبد خرید",
+    "heading": "سبد خرید",
+    "subtotal": "جمع جزء",
+    "subtotalNote": "(بدون مالیات)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "هنگام انتقال سبد خرید مشکلی پیش آمد",
+    "runTransferAgain": "تلاش دوباره برای انتقال",
+    "transferring": "در حال انتقال..."
+  },
+  "CartSummary": {
+    "goToCheckout": "رفتن به تسویه‌حساب"
+  },
+  "CartTotals": {
+    "discount": "تخفیف",
+    "shipping": "هزینه ارسال",
+    "subtotal": "جمع جزء (بدون هزینه ارسال و مالیات)",
+    "taxes": "مالیات",
+    "total": "مبلغ کل"
+  },
+  "CategoryMenu": {
+    "title": "دسته‌بندی‌ها",
+    "viewAll": "مشاهده همه"
+  },
+  "CheckoutPage": {
+    "addNewAddress": "افزودن نشانی جدید",
+    "addressHeading": "نشانی ارسال",
+    "addressModalTitle": "نشانی ارسال",
+    "addressNotNeededForPickup": "برای دریافت حضوری لازم نیست",
+    "back": "بازگشت",
+    "backToCart": "بازگشت به سبد خرید",
+    "billingHeading": "نشانی صورتحساب",
+    "billingSameAsShipping": "نشانی صورتحساب همان نشانی ارسال است",
+    "close": "بستن",
+    "contactsHeading": "اطلاعات تماس",
+    "contactsModalTitle": "اطلاعات تماس",
+    "copyright": "© {year} {siteName}. تمامی حقوق محفوظ است.",
+    "deliveryDateFrom": "از {date}",
+    "deliveryDateUntil": "تا {date}",
+    "deliveryToday": "امروز",
+    "discount": "تخفیف",
+    "edit": "ویرایش",
+    "fieldAddress": "نشانی",
+    "fieldCity": "شهر",
+    "fieldCompany": "شرکت",
+    "fieldEmail": "ایمیل",
+    "fieldFirstName": "نام",
+    "fieldLastName": "نام خانوادگی",
+    "fieldPhone": "تلفن",
+    "fieldPostalCode": "کد پستی",
+    "fieldProvince": "استان",
+    "freeShipping": "رایگان",
+    "giftCard": "کارت هدیه",
+    "itemsCount": "{count, plural, one {{count} مورد} other {{count} مورد}}",
+    "legal": "با کلیک روی «پرداخت»، <terms>شرایط</terms>، <termsOfUse>شرایط استفاده</termsOfUse> و <returnPolicy>سیاست مرجوعی</returnPolicy> ما را می‌پذیرید و با <privacyPolicy>سیاست حفظ حریم خصوصی</privacyPolicy> موافقت می‌کنید.",
+    "manualInput": "وارد کردن دستی نشانی",
+    "orderComposition": "خلاصه سفارش",
+    "paymentHeading": "روش پرداخت",
+    "recipientCheckbox": "گیرنده شخص دیگری است",
+    "recipientHeading": "اطلاعات گیرنده",
+    "returnsLink": "سیاست مرجوعی",
+    "sameAsShipping": "همانند نشانی ارسال",
+    "save": "ذخیره",
+    "saving": "در حال ذخیره‌سازی...",
+    "shippingCost": "هزینه ارسال",
+    "shippingDescription": "روش تحویل سفارش را انتخاب کنید",
+    "shippingHeading": "روش ارسال",
+    "shippingLink": "هزینه ارسال",
+    "shippingUnavailable": "روش ارسالی در دسترس نیست",
+    "signIn": "ورود",
+    "total": "مبلغ کل"
+  },
+  "Common": {
+    "clear": "پاک‌کردن",
+    "close": "بستن",
+    "hidePassword": "پنهان کردن گذرواژه",
+    "orderNumber": "سفارش شماره {id}",
+    "poweredBy": "ارائه‌شده با",
+    "remove": "حذف",
+    "showPassword": "نمایش گذرواژه"
+  },
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "در صفحه ارسال، روش‌های تحویل و هزینه هرکدام فهرست شده‌اند.",
+        "question": "سفارشم چه زمانی به دستم می‌رسد؟"
+      },
+      {
+        "answer": "در صفحه مرجوعی، مراحل بازگرداندن کالا یا تعویض آن توضیح داده شده است.",
+        "question": "چطور می‌توانم کالا را مرجوع یا تعویض کنم؟"
+      },
+      {
+        "answer": "از طریق صفحه تماس با ما پیام بفرستید؛ در اولین فرصت پاسخ می‌دهیم.",
+        "question": "چطور با شما تماس بگیرم؟"
+      }
+    ],
+    "placeholder": "این متن به‌صورت نمونه همراه قالب ارائه شده است. پیش از انتشار، آن را با متن خود جایگزین کنید."
+  },
+  "DiscountCode": {
+    "addPromotionCode": "افزودن کد تخفیف",
+    "apply": "اعمال",
+    "removeDiscount": "حذف کد تخفیف از سفارش"
+  },
+  "Errors": {
+    "emailExists": "حسابی با این ایمیل از قبل وجود دارد.",
+    "generic": "مشکلی پیش آمد. لطفاً دوباره تلاش کنید.",
+    "insufficientInventory": "متأسفیم، موجودی این کالا کافی نیست.",
+    "invalidCredentials": "ایمیل یا گذرواژه اشتباه است.",
+    "invalidDiscount": "این کد تخفیف نامعتبر است یا اعتبار آن به پایان رسیده است.",
+    "invalidEmail": "لطفاً یک نشانی ایمیل معتبر وارد کنید.",
+    "invalidResetLink": "این پیوند دیگر معتبر نیست؛ ممکن است قبلاً استفاده شده یا منقضی شده باشد. لطفاً پیوند جدیدی درخواست کنید.",
+    "network": "مشکل اتصال وجود دارد. اتصال اینترنت را بررسی و دوباره تلاش کنید.",
+    "notFound": "موردی که دنبالش هستید پیدا نشد.",
+    "passwordMismatch": "گذرواژه‌ها با هم مطابقت ندارند.",
+    "passwordTooShort": "گذرواژه باید دست‌کم ۸ نویسه داشته باشد.",
+    "paymentFailed": "پرداخت شما انجام نشد. لطفاً دوباره تلاش کنید یا روش دیگری را انتخاب کنید.",
+    "unauthorized": "برای ادامه وارد حساب کاربری شوید."
+  },
+  "Filters": {
+    "sort": "مرتب‌سازی",
+    "title": "فیلترها"
+  },
+  "Footer": {
+    "categoriesHeading": "دسته‌بندی‌ها",
+    "collectionsHeading": "مجموعه‌ها",
+    "copyright": "© {year} {siteName}. تمامی حقوق محفوظ است.",
+    "infoHeading": "اطلاعات",
+    "medusaDocs": "مستندات Medusa",
+    "sourceCode": "کد منبع قالب اولیه",
+    "starterDocs": "مستندات قالب اولیه"
+  },
+  "ForgotPassword": {
+    "backToSignIn": "بازگشت به ورود",
+    "description": "ایمیلی را که هنگام ثبت‌نام استفاده کردید وارد کنید تا پیوند تنظیم گذرواژه جدید برایتان ارسال شود.",
+    "email": "ایمیل",
+    "emailTitle": "یک نشانی ایمیل معتبر وارد کنید.",
+    "guestAction": "ثبت‌نام",
+    "guestPrompt": "بدون ساخت حساب، به‌صورت مهمان سفارش داده‌اید؟ هنوز گذرواژه‌ای برای بازنشانی وجود ندارد. با همان ایمیل حساب بسازید تا بتوانید سفارش‌ها را به آن متصل کنید.",
+    "heading": "بازنشانی گذرواژه",
+    "invalidEmail": "لطفاً یک نشانی ایمیل معتبر وارد کنید.",
+    "requestFailed": "ارسال پیوند ممکن نشد. لطفاً کمی بعد دوباره تلاش کنید.",
+    "sent": "اگر حسابی با این ایمیل وجود داشته باشد، پیوند برایتان ارسال شده است. صندوق ورودی و پوشه هرزنامه را بررسی کنید.",
+    "submit": "ارسال پیوند"
+  },
+  "FreeShipping": {
+    "onlyAway": "فقط {amount} تا باقی مانده",
+    "unlock": "فعال‌سازی ارسال رایگان",
+    "unlocked": "ارسال رایگان فعال شد!",
+    "viewCart": "مشاهده سبد خرید",
+    "viewProducts": "مشاهده محصولات"
+  },
+  "Help": {
+    "contact": "اطلاعات تماس",
+    "needHelp": "راهنما",
+    "returnsExchanges": "مرجوعی و تعویض"
+  },
+  "Hero": {
+    "eyebrow": "آماده استفاده · متن‌باز",
+    "features": [
+      {
+        "description": "بهینه‌شده، بدون مراحل اضافی، تکمیل خودکار نشانی",
+        "label": "فرایند تسویه‌حساب بهینه‌شده برای افزایش خرید"
+      },
+      {
+        "description": "جست‌وجو، فهرست محصولات قابل فیلتر، دسته‌بندی‌های چندسطحی و طراحی موبایل‌محور",
+        "label": "فروشگاه اینترنتی با امکانات کامل"
+      },
+      {
+        "description": "متاتگ‌ها، کارت‌های Open Graph و توییتر، JSON-LD، نقشه سایت، robots، llms.txt و امتیاز ۱۰۰ از ۱۰۰ در PageSpeed Insights",
+        "label": "بهینه‌شده برای SEO و هوش مصنوعی"
+      },
+      {
+        "description": "۳۶ زبان برای فروشگاه با پشتیبانی RTL و ۲۴۱ کشور برای مناطق فروش، تشخیص کشور و امکان محدودسازی آسان به گزینه‌های موردنیاز",
+        "label": "بومی‌سازی کامل"
+      },
+      {
+        "description": "قالب‌های ایمیل React از طریق SMTP",
+        "label": "ایمیل‌های تراکنشی"
+      },
+      {
+        "description": "هنگام تغییرات فهرست محصولات",
+        "label": "به‌روزرسانی کش بر اساس درخواست"
+      },
+      {
+        "badge": "جدید",
+        "description": "مدیریت تنظیمات ارائه‌دهندگان از طریق پنل مدیریت",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "label": "ماژول یکپارچه‌سازی"
+      }
+    ],
+    "featuresHeading": "ویژگی‌ها",
+    "readDocs": "مطالعه مستندات",
+    "subtitle": "تمام قابلیت‌هایی که در قالب رسمی Medusa DTC وجود ندارند.",
+    "title": "قالب Medusa DTC آماده استفاده در محیط عملیاتی",
+    "viewOnGitHub": "مشاهده در GitHub"
+  },
+  "ImageGallery": {
+    "goToImage": "رفتن به تصویر {index}",
+    "openFullImage": "باز کردن تصویر کامل"
+  },
+  "LanguageSelect": {
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文",
+      "fa": "فارسی"
+    }
+  },
+  "LineItemOptions": {
+    "variant": "مدل:"
+  },
+  "Login": {
+    "description": "سفارش‌ها و نشانی‌های تحویل شما در حساب کاربری‌تان ذخیره می‌شوند و فرایند خرید سریع‌تر خواهد بود.",
+    "email": "ایمیل",
+    "emailTitle": "یک نشانی ایمیل معتبر وارد کنید.",
+    "forgotPassword": "گذرواژه‌تان را فراموش کرده‌اید؟",
+    "heading": "ورود",
+    "joinUs": "به ما بپیوندید",
+    "notMember": "هنوز عضو نشده‌اید؟",
+    "password": "گذرواژه",
+    "signIn": "ورود"
+  },
+  "Metadata": {
+    "account": {
+      "description": "نمای کلی فعالیت‌های حساب کاربری شما.",
+      "title": "حساب کاربری"
+    },
+    "addresses": {
+      "description": "مشاهده نشانی‌های شما",
+      "title": "نشانی‌ها"
+    },
+    "cart": {
+      "description": "مشاهده سبد خرید",
+      "title": "سبد خرید"
+    },
+    "category": {
+      "description": "دسته {category} را در {siteName} ببینید. گزینه‌ها را مقایسه کنید، قیمت‌ها را بررسی کنید و محصول مناسب خود را بیابید."
+    },
+    "checkout": {
+      "description": "سفارش خود را بررسی کنید، اطلاعات تحویل را وارد کنید و با امنیت پرداخت کنید.",
+      "title": "تسویه‌حساب"
+    },
+    "collection": {
+      "description": "مجموعه {collection} را در {siteName} ببینید و از میان محصولات، گزینه مناسب خود را پیدا کنید."
+    },
+    "contact": {
+      "description": "برای پیگیری سفارش، محصول یا هر موضوع دیگری با ما تماس بگیرید.",
+      "title": "اطلاعات تماس"
+    },
+    "customerService": {
+      "description": "پاسخ پرسش‌های پرتکرار و راه‌های ارتباط با ما.",
+      "title": "خدمات مشتریان"
+    },
+    "home": {
+      "description": "مجموعه منتخب محصولات ما را ببینید، جدیدترین مدل‌ها را بررسی کنید و محصول مورد علاقه‌تان را پیدا کنید."
+    },
+    "login": {
+      "description": "وارد حساب خود در {siteName} شوید.",
+      "title": "ورود"
+    },
+    "orderConfirmed": {
+      "description": "خرید شما با موفقیت انجام شد",
+      "title": "تأیید سفارش"
+    },
+    "orderDetails": {
+      "description": "مشاهده سفارش"
+    },
+    "orderTransfer": {
+      "title": "انتقال سفارش"
+    },
+    "orders": {
+      "description": "نمای کلی سفارش‌های قبلی شما.",
+      "title": "سفارش‌ها"
+    },
+    "privacy": {
+      "description": "ببینید فروشگاه چه اطلاعات شخصی‌ای جمع‌آوری می‌کند و چرا.",
+      "title": "سیاست حفظ حریم خصوصی"
+    },
+    "profile": {
+      "description": "مشاهده و ویرایش پروفایل شما در {siteName}.",
+      "title": "پروفایل"
+    },
+    "resetPassword": {
+      "description": "برای حساب خود گذرواژه جدید تنظیم کنید.",
+      "title": "بازنشانی گذرواژه"
+    },
+    "returns": {
+      "description": "روش مرجوع یا تعویض کالا، مهلت انجام آن و زمان بازپرداخت وجه را ببینید.",
+      "title": "مرجوعی و تعویض"
+    },
+    "shipping": {
+      "description": "روش تحویل سفارش‌ها و هزینه ارسال را مشاهده کنید.",
+      "title": "هزینه ارسال"
+    },
+    "store": {
+      "description": "همه محصولات را ببینید، بر اساس دسته‌بندی و ویژگی فیلتر کنید، قیمت‌ها را مرتب کنید و کالای موردنظر را بیابید.",
+      "title": "فروشگاه"
+    },
+    "terms": {
+      "description": "شرایطی را که هنگام خرید از ما می‌پذیرید مطالعه کنید.",
+      "title": "شرایط استفاده"
+    }
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "انتخاب کنید..."
+  },
+  "Nav": {
+    "account": "حساب کاربری",
+    "cart": "سبد خرید ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "سبد خریدی که می‌خواهید به آن دسترسی پیدا کنید وجود ندارد. کوکی‌ها را پاک کنید و دوباره تلاش کنید.",
+    "description": "صفحه‌ای که می‌خواهید ببینید وجود ندارد.",
+    "goHome": "رفتن به صفحه اصلی",
+    "title": "صفحه پیدا نشد"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "تکمیل راه‌اندازی در پنل مدیریت",
+    "completeSetup": "اکنون می‌توانید راه‌اندازی فروشگاه را در پنل مدیریت تکمیل کنید.",
+    "orderCreated": "سفارش آزمایشی شما با موفقیت ایجاد شد!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, one {{count} مورد} other {{count} مورد}}",
+    "more": "مورد دیگر",
+    "seeDetails": "مشاهده جزئیات"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "سفارش شما با موفقیت ثبت شد.",
+    "thankYou": "سپاسگزاریم!"
+  },
+  "OrderDetails": {
+    "backToOrders": "بازگشت به سفارش‌ها",
+    "confirmationSentBefore": "جزئیات تأیید سفارش را به این نشانی ارسال کرده‌ایم:",
+    "fulfillmentStatuses": {
+      "canceled": "لغوشده",
+      "delivered": "تحویل‌شده",
+      "fulfilled": "تکمیل‌شده",
+      "not_fulfilled": "تکمیل‌نشده",
+      "partially_delivered": "تحویل‌شده به‌صورت جزئی",
+      "partially_fulfilled": "تکمیل‌شده به‌صورت جزئی",
+      "partially_shipped": "ارسال‌شده به‌صورت جزئی",
+      "shipped": "ارسال‌شده"
+    },
+    "items": "اقلام",
+    "orderDate": "تاریخ سفارش:",
+    "orderNumber": "شماره سفارش:",
+    "paymentStatuses": {
+      "authorized": "تأییدشده",
+      "awaiting": "در انتظار پرداخت",
+      "canceled": "لغوشده",
+      "captured": "پرداخت‌شده",
+      "not_paid": "پرداخت‌نشده",
+      "partially_authorized": "تأییدشده به‌صورت جزئی",
+      "partially_captured": "پرداخت‌شده به‌صورت جزئی",
+      "partially_refunded": "بازپرداخت‌شده به‌صورت جزئی",
+      "refunded": "بازپرداخت‌شده",
+      "requires_action": "نیازمند اقدام"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "ادامه خرید",
+    "noOrdersYet": "هنوز سفارشی ثبت نکرده‌اید",
+    "nothingToSeeHere": "موردی برای نمایش وجود ندارد"
+  },
+  "OrderSummary": {
+    "discount": "تخفیف",
+    "giftCard": "کارت هدیه",
+    "heading": "خلاصه سفارش",
+    "shipping": "هزینه ارسال",
+    "subtotal": "جمع جزء",
+    "taxes": "مالیات",
+    "total": "مبلغ کل"
+  },
+  "OrdersPage": {
+    "description": "سفارش‌های قبلی و وضعیت آن‌ها را مشاهده کنید.",
+    "heading": "سفارش‌ها"
+  },
+  "Payment": {
+    "anotherStep": "مرحله دیگری نمایش داده خواهد شد",
+    "continueToReview": "ادامه و بررسی",
+    "edit": "ویرایش",
+    "enterPaymentDetails": "وارد کردن اطلاعات پرداخت",
+    "giftCard": "کارت هدیه",
+    "heading": "پرداخت",
+    "paymentDetails": "جزئیات پرداخت",
+    "paymentMethod": "روش پرداخت"
+  },
+  "PaymentButton": {
+    "placeOrder": "پرداخت",
+    "selectPaymentMethod": "یک روش پرداخت انتخاب کنید"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "اطلاعات پرداخت خود را وارد کنید:",
+    "loadError": "بارگذاری روش‌های پرداخت ممکن نشد."
+  },
+  "PaymentDetails": {
+    "heading": "پرداخت",
+    "paidAt": "زمان پرداخت",
+    "paymentDetails": "جزئیات پرداخت",
+    "paymentMethod": "روش پرداخت"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": {
+      "title": "کارت اعتباری",
+      "subtitle": "پرداخت‌های Medusa"
+    },
+    "pp_paypal_paypal": {
+      "title": "پی‌پال"
+    },
+    "pp_stripe-bancontact_stripe": {
+      "title": "Bancontact",
+      "subtitle": "Stripe"
+    },
+    "pp_stripe-ideal_stripe": {
+      "title": "iDeal",
+      "subtitle": "Stripe"
+    },
+    "pp_stripe_stripe": {
+      "title": "کارت اعتباری",
+      "subtitle": "Stripe"
+    },
+    "pp_system_default": {
+      "title": "پرداخت دستی"
+    }
+  },
+  "PaymentTest": {
+    "attention": "توجه:",
+    "testingOnly": "فقط برای آزمایش."
+  },
+  "ProductActions": {
+    "addToCart": "افزودن به سبد خرید",
+    "outOfStock": "ناموجود",
+    "selectOptions": "انتخاب گزینه‌ها",
+    "selectVariant": "انتخاب مدل"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "ادامه راه‌اندازی در پنل مدیریت",
+    "continueSetup": "اکنون می‌توانید راه‌اندازی فروشگاه خود را در پنل مدیریت ادامه دهید.",
+    "demoCreated": "محصول نمایشی شما با موفقیت ایجاد شد!"
+  },
+  "ProductPrice": {
+    "from": "از ",
+    "original": "قیمت اصلی: "
+  },
+  "ProductRail": {
+    "viewAll": "مشاهده همه"
+  },
+  "ProductTabs": {
+    "easyReturns": "مرجوعی آسان",
+    "easyReturnsDesc": "کالا را بازگردانید تا وجه شما را پس بدهیم. تلاش می‌کنیم فرایند مرجوعی ساده باشد.",
+    "fastDelivery": "تحویل سریع",
+    "fastDeliveryDesc": "سفارش شما طی ۳ تا ۵ روز کاری در محل دریافت یا نشانی منزل تحویل داده می‌شود.",
+    "shippingReturns": "ارسال و مرجوعی",
+    "simpleExchanges": "تعویض آسان",
+    "simpleExchangesDesc": "این کالا مناسب شما نیست؟ آن را با محصول دیگری تعویض می‌کنیم."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "نشانی صورتحساب",
+    "noBillingAddress": "نشانی صورتحساب ثبت نشده است"
+  },
+  "ProfileEmail": {
+    "email": "ایمیل",
+    "label": "ایمیل"
+  },
+  "ProfileName": {
+    "firstName": "نام",
+    "label": "نام",
+    "lastName": "نام خانوادگی",
+    "noName": "نامی ثبت نشده است"
+  },
+  "ProfilePage": {
+    "description": "نام، ایمیل، شماره تلفن و نشانی صورتحساب خود را مشاهده و ویرایش کنید.",
+    "heading": "پروفایل"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "تأیید گذرواژه",
+    "hidden": "به دلایل امنیتی، گذرواژه نمایش داده نمی‌شود",
+    "label": "گذرواژه",
+    "newPassword": "گذرواژه جدید",
+    "oldPassword": "گذرواژه قبلی"
+  },
+  "ProfilePhone": {
+    "label": "تلفن",
+    "noPhone": "شماره تلفنی ثبت نشده است",
+    "phone": "تلفن"
+  },
+  "PromoBanner": {
+    "close": "بستن",
+    "cta": "راه‌اندازی فروشگاه خودتان",
+    "message": "این فروشگاه با قالب رایگان Medusa DTC Starter از Gorgo اجرا می‌شود."
+  },
+  "RegionSelect": {
+    "apply": "اعمال",
+    "close": "بستن",
+    "placeholder": "جست‌وجوی کشور یا زبان",
+    "tabCountry": "کشور",
+    "tabLanguage": "زبان",
+    "title": "تغییر منطقه"
+  },
+  "Register": {
+    "agreeText": "با ایجاد حساب در {siteName}، با موارد زیر موافقت می‌کنید:",
+    "alreadyMember": "قبلاً عضو شده‌اید؟",
+    "and": "و",
+    "description": "در {siteName} حساب بسازید تا سفارش‌ها و نشانی‌های شما یک‌جا ذخیره شوند و سریع‌تر خرید کنید.",
+    "email": "ایمیل",
+    "firstName": "نام",
+    "heading": "عضویت در {siteName}",
+    "join": "عضویت",
+    "lastName": "نام خانوادگی",
+    "password": "گذرواژه",
+    "phone": "تلفن",
+    "privacyPolicy": "سیاست حفظ حریم خصوصی",
+    "signIn": "ورود",
+    "termsOfUse": "شرایط استفاده"
+  },
+  "RelatedProducts": {
+    "title": "شاید این محصولات را هم بپسندید"
+  },
+  "ResetPassword": {
+    "confirmPassword": "تکرار گذرواژه",
+    "description": "برای حساب خود گذرواژه جدیدی انتخاب کنید.",
+    "descriptionWithEmail": "برای {email} گذرواژه جدیدی انتخاب کنید.",
+    "done": "گذرواژه شما تغییر کرد. اکنون می‌توانید با آن وارد شوید.",
+    "goToSignIn": "ورود",
+    "heading": "گذرواژه جدید",
+    "missingToken": "توکن این پیوند وجود ندارد. از صفحه ورود، پیوند جدیدی درخواست کنید.",
+    "password": "گذرواژه جدید",
+    "submit": "ذخیره گذرواژه"
+  },
+  "Review": {
+    "confirmText": "با کلیک روی دکمه پرداخت، تأیید می‌کنید که شرایط استفاده، شرایط فروش و سیاست مرجوعی را خوانده‌اید، درک کرده‌اید و می‌پذیرید؛ همچنین تأیید می‌کنید که سیاست حفظ حریم خصوصی {siteName} را مطالعه کرده‌اید.",
+    "heading": "بازبینی"
+  },
+  "Search": {
+    "empty": "نتیجه‌ای برای «{query}» یافت نشد",
+    "label": "جست‌وجو",
+    "loading": "در حال جست‌وجو…",
+    "placeholder": "جست‌وجوی محصولات",
+    "popular": "محصولات پرطرفدار"
+  },
+  "Shipping": {
+    "chooseStore": "فروشگاهی در نزدیکی خود انتخاب کنید",
+    "continueToPayment": "ادامه به پرداخت",
+    "deliveryDescription": "مایلید سفارش شما چگونه تحویل داده شود؟",
+    "edit": "ویرایش",
+    "heading": "تحویل",
+    "method": "روش",
+    "pickUpOrder": "دریافت حضوری سفارش",
+    "shippingMethod": "روش ارسال",
+    "store": "فروشگاه"
+  },
+  "ShippingDetails": {
+    "contact": "اطلاعات تماس",
+    "heading": "تحویل",
+    "method": "روش",
+    "shippingAddress": "نشانی ارسال"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. تمامی حقوق محفوظ است.",
+    "items": {
+      "account": "حساب کاربری",
+      "cart": "سبد خرید",
+      "home": "خانه",
+      "store": "فروشگاه"
+    },
+    "menuButton": "منو"
+  },
+  "SignInPrompt": {
+    "description": "نشانی‌های ذخیره‌شده شما هنگام تسویه‌حساب در دسترس هستند و سفارش در حساب کاربری‌تان ثبت می‌شود.",
+    "heading": "برای تسویه‌حساب سریع‌تر وارد شوید",
+    "signIn": "ورود"
+  },
+  "SortSelect": {
+    "latestArrivals": "جدیدترین محصولات",
+    "placeholder": "مرتب‌سازی بر اساس",
+    "priceHighLow": "قیمت: از زیاد به کم",
+    "priceLowHigh": "قیمت: از کم به زیاد"
+  },
+  "Store": {
+    "allProducts": "همه محصولات"
+  },
+  "TransferActions": {
+    "acceptTransfer": "پذیرش انتقال",
+    "declineSuccess": "انتقال سفارش با موفقیت رد شد!",
+    "declineTransfer": "رد انتقال",
+    "transferSuccess": "سفارش با موفقیت منتقل شد!"
+  },
+  "TransferPage": {
+    "acceptError": "پذیرش انتقال ممکن نشد. ممکن است پیوند نامعتبر باشد یا قبلاً استفاده شده باشد.",
+    "acceptInfo": "در صورت پذیرش، مالک جدید تمام مسئولیت‌ها و مجوزهای مرتبط با این سفارش را بر عهده می‌گیرد.",
+    "acceptedBody": "سفارش {id} با موفقیت به مالک جدید منتقل شد.",
+    "acceptedHeading": "سفارش منتقل شد!",
+    "declineError": "رد انتقال ممکن نشد. ممکن است پیوند نامعتبر باشد یا قبلاً استفاده شده باشد.",
+    "declinedBody": "انتقال سفارش {id} رد شد.",
+    "declinedHeading": "انتقال رد شد",
+    "noAction": "اگر این درخواست را نمی‌شناسید یا می‌خواهید مالکیت را حفظ کنید، نیازی به اقدام دیگری نیست.",
+    "requestHeading": "درخواست انتقال سفارش {id}",
+    "requestIntro": "درخواستی برای انتقال مالکیت سفارش شما ({id}) دریافت کرده‌اید. در صورت موافقت، می‌توانید با دکمه زیر انتقال را تأیید کنید."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "سفارشی را که به دنبالش هستید پیدا نمی‌کنید؟",
+    "connectOrder": "یک سفارش را به حساب خود متصل کنید.",
+    "heading": "انتقال سفارش‌ها",
+    "orderId": "پیوند یا شناسه سفارش",
+    "requestTransfer": "درخواست انتقال",
+    "transferEmailSent": "ایمیل درخواست انتقال به {email} ارسال شد",
+    "transferRequested": "درخواست انتقال سفارش {orderId} ثبت شد",
+    "whereToFind": "ایمیل تأیید آن سفارش را باز کنید و پیوند موجود در آن را اینجا وارد کنید."
+  }
+}
