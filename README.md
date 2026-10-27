@@ -20,7 +20,7 @@
 </h4>
 
 <p align="center">
-  A production-ready <a href="https://medusajs.com/">Medusa</a> starter for direct-to-consumer commerce: a Medusa backend and a Next.js storefront with a conversion-focused checkout, 36 storefront languages, 241 countries, transactional emails, SEO with an <code>llms.txt</code> endpoint, and integrations you configure straight from the Medusa Admin.
+  A production-ready <a href="https://medusajs.com/">Medusa</a> starter for direct-to-consumer commerce with a Medusa backend, a Persian Next.js storefront, a conversion-focused checkout, 241 countries, transactional emails, SEO with an <code>llms.txt</code> endpoint, and integrations you configure straight from the Medusa Admin.
 </p>
 
 <p align="center">
@@ -53,7 +53,7 @@ Everything the official [Medusa DTC Starter](https://github.com/medusajs/dtc-sta
 
 - **Conversion-focused checkout** – contacts, address, shipping, and payment open as sheets over one screen, with cart totals and promotion codes alongside. The design borrows from the [Yandex KIT](https://kit.yandex.ru) checkout, and every field can be removed or added.
 - **Address autocomplete** – the address field suggests options as you type and fills in postal code, city, and region. [DaData](https://dadata.ru/?ref=276331) ships built in, any other provider plugs into the same interface, and the buyer can always switch to manual entry. See [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete).
-- **Full localization** – [36 storefront languages](apps/storefront/src/i18n/config.ts) with RTL support, [241 seeded countries](apps/backend/src/migration-scripts/data/regions/json) for sales regions, each with its own currency and shipping options, and [emails in all 36 languages](apps/backend/src/emails/i18n/messages).
+- **Full localization** – [a Persian storefront](apps/storefront/src/i18n/config.ts) with RTL support, [241 seeded countries](apps/backend/src/migration-scripts/data/regions/json) for sales regions, each with its own currency and shipping options, and [emails in all 36 languages](apps/backend/src/emails/i18n/messages).
 - **Automatic country detection** – a first-time visitor lands in the region their country belongs to, resolved from the hosting platform's geo headers or from their IP. See [Set Up Country Detection](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-country-detection).
 - **Catalog search** – instant product search with highlighted matches, ready to swap for a dedicated engine such as [Meilisearch](https://www.meilisearch.com/).
 - **Filterable catalog** – option filters, sorting, a category and subcategory sidebar, and a bottom sheet on mobile, with the selection kept in the URL so it can be shared as a link. The design borrows from the catalog of fashion brand [12 STOREEZ](https://12storeez.store).
@@ -212,3 +212,9 @@ More Medusa channels: [GitHub Discussions](https://github.com/medusajs/medusa/di
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Persian Interface
+
+You use Persian as the only storefront and Admin interface language. The storefront uses `/fa` routes and right-to-left layouts. Old language links redirect to their Persian equivalents.
+
+You manage product names and descriptions in Medusa Admin. Existing catalog records and the multilingual demo seed retain their original content. Enter Persian content for your live catalog.

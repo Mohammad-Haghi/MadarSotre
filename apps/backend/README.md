@@ -75,3 +75,13 @@ Copy [`.env.template`](.env.template) to `.env`. Only `DATABASE_URL` has to be s
 | `MEDUSA_ADMIN_ONBOARDING_NEXTJS_DIRECTORY` | Storefront directory for Medusa's onboarding flow | `medusa-storefront` |
 
 Installation, seed data, deployment, and everything else that spans both apps live in the [root README](../../README.md).
+
+## Persian Admin
+
+You use Persian throughout the Admin, including login and profile settings. The Vite plugin in `src/admin-config/persian.ts` restricts the dashboard language to `fa` and uses Medusa's bundled Persian translations. Rebuild the Admin after changing this configuration. Check the plugin against the dashboard bundle when you upgrade Medusa.
+
+You enter Persian product names and descriptions in the catalog. Interface language settings do not translate stored catalog content or transactional emails.
+
+## Local Font
+
+You use the bundled IRANSansX variable web font for interface text and controls. You keep its font file in `src/admin/assets/fonts` and its CSS in `src/admin/styles.css`. Vite bundles the font with the Admin.

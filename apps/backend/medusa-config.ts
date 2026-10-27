@@ -1,4 +1,5 @@
 import { defineConfig, loadEnv } from "@medusajs/framework/utils";
+import { persianAdmin } from "./src/admin-config/persian";
 
 loadEnv(process.env.NODE_ENV || "development", process.cwd());
 
@@ -66,6 +67,9 @@ const s3Module = {
 };
 
 module.exports = defineConfig({
+  admin: {
+    vite: () => ({ plugins: [persianAdmin()] }),
+  },
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     databaseDriverOptions: { connection: { ssl: false } },

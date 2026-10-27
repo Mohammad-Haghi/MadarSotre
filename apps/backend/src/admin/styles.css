@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "IRANSansX";
+  src: url("./assets/fonts/IRANSansXVF.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "IRANSansX", Tahoma, sans-serif;
+}
+
+/* Override the dashboard's typography utilities, including important variants. */
+:root body :is(.font-sans, [class*="txt-"], .h1-core, .h2-core, .h3-core, [cmdk-group-heading]) {
+  font-family: "IRANSansX", Tahoma, sans-serif !important;
+}

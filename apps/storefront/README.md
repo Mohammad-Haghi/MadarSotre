@@ -20,7 +20,7 @@
 </h4>
 
 <p align="center">
-  The Next.js storefront of <a href="../../README.md">Medusa DTC Starter by Gorgo</a>: a modal checkout with address autocomplete, a filterable catalog with instant search, 36 UI languages, and SEO with an <code>llms.txt</code> endpoint.
+  The Next.js storefront of <a href="../../README.md">Medusa DTC Starter by Gorgo</a> offers a modal checkout with address autocomplete, a filterable catalog with instant search, a Persian interface, and SEO with an <code>llms.txt</code> endpoint.
 </p>
 
 <p align="center">
@@ -74,3 +74,13 @@ See [Set Up Country Detection](https://docs.gorgojs.com/tools/medusa-dtc-starter
 With `NEXT_PUBLIC_GA_MEASUREMENT_ID` set, [`GoogleAnalytics`](src/modules/common/components/google-analytics/index.tsx) holds `gtag.js` back until the browser goes idle after load, or until the visitor first scrolls, taps, clicks or types, capped at 3 seconds, which keeps the script out of Largest Contentful Paint and Total Blocking Time. That has two consequences. A visitor who closes the tab within the first second is never counted, and the tag loads for everyone, so a shop serving the EU or the UK needs a consent banner in front of it. Client-side navigation reports on its own, as long as **Enhanced Measurement** is on for the property.
 
 Installation, features, deployment, and everything else that spans both apps live in the [root README](../../README.md).
+
+## Persian Storefront
+
+You use Persian as the only interface language, with right-to-left layouts and `/fa` routes. The storefront ignores other browser language preferences and redirects old language URLs to Persian. The navigation shows no region or language selector. Country detection continues to resolve the shopping region.
+
+You maintain interface text in `messages/fa.json`. Other catalogs remain in the repository as reference files and are unavailable through storefront routes.
+
+## Local Font
+
+You use the bundled IRANSansX variable web font for interface text and controls. You keep its font file in `src/assets/fonts`. The root layout loads and preloads it through `next/font/local`, and Tailwind uses the same family.

@@ -596,7 +596,7 @@
   "RegionSelect": {
     "apply": "اعمال",
     "close": "بستن",
-    "placeholder": "جست‌وجوی کشور یا زبان",
+    "placeholder": "جست‌وجوی کشور",
     "tabCountry": "کشور",
     "tabLanguage": "زبان",
     "title": "تغییر منطقه"

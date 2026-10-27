@@ -1,1 +1,3 @@
-export default {}
+import "../styles.css";
+
+export default {};

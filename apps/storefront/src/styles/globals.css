@@ -2,6 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Keep Medusa's typography utilities on the same family as the page. */
+:root body :is(.font-sans, [class*="txt-"], .h1-core, .h2-core, .h3-core, [cmdk-group-heading]) {
+  font-family: var(--font-iransansx), Tahoma, sans-serif !important;
+}
+
+
 /*
  * Medusa's default --fg-interactive (blue-500) only reaches 3.67:1 on white,
  * below the 4.5:1 WCAG AA threshold for body-size text. Shift the pair one

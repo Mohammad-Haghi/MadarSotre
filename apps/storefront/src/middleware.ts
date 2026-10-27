@@ -78,6 +78,14 @@ export async function middleware(request: NextRequest) {
 
   const segments = request.nextUrl.pathname.split("/").filter(Boolean)
   const firstSegment = segments[0]
+  // Preserve bookmarks from the former multilingual storefront.
+  if (firstSegment !== defaultLocale && /^[a-z]{2}(?:-[A-Za-z]{2})?$/.test(firstSegment ?? "")) {
+    const path = [defaultLocale, ...segments.slice(1)].join("/")
+    const res = NextResponse.redirect(new URL(`/${path}${request.nextUrl.search}`, request.url), 308)
+    res.cookies.set(COOKIE_NAMES.locale, defaultLocale, persistentCookieOpts)
+    return applyCountry(res)
+  }
+
   const hasLocaleInUrl = firstSegment && isAppLocale(firstSegment)
 
   function withCookies(res: NextResponse, locale: string): NextResponse {

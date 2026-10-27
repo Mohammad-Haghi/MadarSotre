@@ -1,23 +1,14 @@
 import { getTranslations } from "next-intl/server"
 import { Link } from "@i18n/navigation"
 
-import { appLocales } from "@i18n/config"
-import { listRegions } from "@lib/data/regions"
 import { SITE_NAME } from "@lib/util/env"
-import { getCountryCode } from "@lib/data/cookies"
-import type { StoreRegion } from "@medusajs/types"
 import { User } from "@medusajs/icons"
 import CartButton from "@modules/layout/components/cart-button"
-import RegionSelect from "@modules/layout/components/region-select"
 import Search from "@modules/layout/components/search"
 import SideMenu from "@modules/layout/components/side-menu"
 
 export default async function Nav() {
   const t = await getTranslations()
-  const [regions, countryCode] = await Promise.all([
-    listRegions().then((regions: StoreRegion[]) => regions),
-    getCountryCode(),
-  ])
 
   return (
     <div className="relative lg:sticky lg:top-0 inset-x-0 z-[60] group">
@@ -37,14 +28,6 @@ export default async function Nav() {
 
           <div className="ms-auto flex h-full flex-1 items-center justify-end gap-x-4 lg:ms-0">
             <Search className="hidden lg:inline-flex text-ui-fg-subtle hover:text-ui-fg-base transition-colors" />
-            <div className="flex min-w-0">
-              <RegionSelect
-                regions={regions}
-                currentCountryCode={countryCode ?? undefined}
-                locales={appLocales}
-                className="min-w-0"
-              />
-            </div>
             <Link
               className="hidden lg:block hover:text-ui-fg-base"
               href="/account"

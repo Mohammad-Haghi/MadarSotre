@@ -1,36 +1,29 @@
 "use server"
 
+import { defaultLocale } from "@i18n/config"
 import { sdk } from "@lib/config"
 import { COOKIE_NAMES, persistentCookieOpts } from "@lib/cookie-config"
 import { revalidateTag } from "next/cache"
 import { cookies as nextCookies } from "next/headers"
 import { getAuthHeaders, getCacheTag, getCartId } from "./cookies"
 
-/**
- * Gets the current locale from cookies
- */
-export const getLocale = async (): Promise<string | null> => {
-  try {
-    const cookies = await nextCookies()
-    return cookies.get(COOKIE_NAMES.locale)?.value ?? null
-  } catch {
-    return null
-  }
-}
+/** Return the store's only language. */
+export const getLocale = async (): Promise<string> => defaultLocale
 
 /**
  * Sets the locale cookie
  */
-export const setLocaleCookie = async (locale: string) => {
+export const setLocaleCookie = async (_locale: string) => {
   const cookies = await nextCookies()
-  cookies.set(COOKIE_NAMES.locale, locale, persistentCookieOpts)
+  cookies.set(COOKIE_NAMES.locale, defaultLocale, persistentCookieOpts)
 }
 
 /**
  * Updates the locale preference via SDK and stores in cookie.
  * Also updates the cart with the new locale if one exists.
  */
-export const updateLocale = async (localeCode: string): Promise<string> => {
+export const updateLocale = async (_localeCode: string): Promise<string> => {
+  const localeCode = defaultLocale
   await setLocaleCookie(localeCode)
 
   const authHeaders = await getAuthHeaders()
