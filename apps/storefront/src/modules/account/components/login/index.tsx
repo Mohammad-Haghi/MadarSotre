@@ -1,18 +1,13 @@
 "use client"
 
 import { login } from "@lib/data/customer"
-import { LOGIN_VIEW } from "@modules/account/templates/login-template"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
 import { useActionState } from "react"
 import { useTranslations } from "next-intl"
 
-type Props = {
-  setCurrentView: (view: LOGIN_VIEW) => void
-}
-
-const Login = ({ setCurrentView }: Props) => {
+const Login = () => {
   const t = useTranslations("Login")
   const [message, formAction] = useActionState(login, null)
 
@@ -28,13 +23,13 @@ const Login = ({ setCurrentView }: Props) => {
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label={t("email")}
-            name="email"
-            type="email"
-            title={t("emailTitle")}
-            autoComplete="email"
+            label={t("username")}
+            name="username"
+            type="text"
+            title={t("usernameTitle")}
+            autoComplete="username"
             required
-            data-testid="email-input"
+            data-testid="username-input"
           />
           <Input
             label={t("password")}
@@ -45,16 +40,6 @@ const Login = ({ setCurrentView }: Props) => {
             data-testid="password-input"
           />
         </div>
-        <div className="flex justify-end mt-2">
-          <button
-            type="button"
-            onClick={() => setCurrentView(LOGIN_VIEW.FORGOT_PASSWORD)}
-            className="text-small-regular text-ui-fg-interactive hover:text-ui-fg-interactive-hover underline"
-            data-testid="forgot-password-button"
-          >
-            {t("forgotPassword")}
-          </button>
-        </div>
         <ErrorMessage error={message} data-testid="login-error-message" />
         <SubmitButton
           size="large"
@@ -64,17 +49,7 @@ const Login = ({ setCurrentView }: Props) => {
           {t("signIn")}
         </SubmitButton>
       </form>
-      <span className="text-center text-ui-fg-base text-small-regular mt-6">
-        {t("notMember")}{" "}
-        <button
-          onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}
-          className="underline"
-          data-testid="register-button"
-        >
-          {t("joinUs")}
-        </button>
-        .
-      </span>
+      <p className="text-center text-small-regular mt-6">{t("contactAdmin")}</p>
     </div>
   )
 }

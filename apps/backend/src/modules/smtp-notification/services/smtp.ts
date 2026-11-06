@@ -56,7 +56,7 @@ export class SmtpNotificationService extends AbstractNotificationProviderService
 
   /**
    * Builds the `From` header. The store name goes in as the display name, so
-   * the inbox shows "Gorgo Medusa Store" rather than the bare address, and the
+   * the inbox shows "فروشگاه مادر" rather than the bare address, and the
    * subject line no longer has to carry it.
    *
    * `nodemailer` takes the name and the address separately and encodes the name

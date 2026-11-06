@@ -17,9 +17,13 @@ export const seedTranslations = async (container: MedusaContainer) => {
   const query = getQuery(container);
   const translationModuleService = container.resolve(Modules.TRANSLATION);
 
-  await translationModuleService.createLocales(
-    SEED_LOCALES.map((code) => ({ code, name: SEED_LOCALE_NAMES[code] })),
-  );
+  const existingLocales = await translationModuleService.listLocales({}, { take: null });
+  const missingLocales = SEED_LOCALES.filter((code) => !existingLocales.some((locale) => locale.code === code));
+  if (missingLocales.length) {
+    await translationModuleService.createLocales(
+      missingLocales.map((code) => ({ code, name: SEED_LOCALE_NAMES[code] })),
+    );
+  }
 
   const translations: CreateTranslationDTO[] = [];
 

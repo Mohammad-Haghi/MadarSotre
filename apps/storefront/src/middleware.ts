@@ -51,7 +51,7 @@ async function getRegionMap(cacheId: string) {
 
     regions.forEach((region: HttpTypes.StoreRegion) => {
       region.countries?.forEach((c) => {
-        regionMapCache.regionMap.set(c.iso_2 ?? "", region)
+        if (c.iso_2 === "ir") regionMapCache.regionMap.set(c.iso_2, region)
       })
     })
 

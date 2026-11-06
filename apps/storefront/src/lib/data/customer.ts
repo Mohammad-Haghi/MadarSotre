@@ -1,5 +1,7 @@
 "use server"
 
+import { getTranslations } from "next-intl/server"
+
 import { sdk } from "@lib/config"
 import medusaError from "@lib/util/medusa-error"
 import type { HttpTypes } from "@medusajs/types"
@@ -230,19 +232,20 @@ export async function resetPassword(
 }
 
 export async function login(_currentState: unknown, formData: FormData) {
-  const email = formData.get("email") as string
+  const username = formData.get("username") as string
   const password = formData.get("password") as string
 
   try {
     await sdk.auth
-      .login("customer", "emailpass", { email, password })
+      .login("customer", "usernamepass", { username, password })
       .then(async (token) => {
         await setAuthToken(token as string)
         const customerCacheTag = await getCacheTag("customers")
         revalidateTag(customerCacheTag)
       })
-  } catch (error) {
-    return String(error)
+  } catch {
+    const t = await getTranslations("Login")
+    return t("invalidCredentials")
   }
 
   try {

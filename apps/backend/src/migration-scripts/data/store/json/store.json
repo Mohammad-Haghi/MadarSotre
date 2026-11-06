@@ -1,6 +1,6 @@
 {
-  "name": "My Store",
-  "default_currency_code": "usd",
+  "name": "فروشگاه مادر",
+  "default_currency_code": "irr",
   "sales_channel": {
     "name": "Default Sales Channel",
     "description": "Created by Medusa"

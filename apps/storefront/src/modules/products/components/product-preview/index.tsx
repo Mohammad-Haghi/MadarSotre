@@ -59,7 +59,7 @@ export default async function ProductPreview({
 
   return (
     <Link href={`/products/${product.handle}`} className="group">
-      <div data-testid="product-wrapper">
+      <div className="store-product-card" data-testid="product-wrapper">
         <Thumbnail
           thumbnail={product.thumbnail}
           images={product.images}

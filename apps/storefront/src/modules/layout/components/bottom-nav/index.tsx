@@ -1,5 +1,4 @@
-import { User } from "@medusajs/icons"
-import Image from "next/image"
+import { House, User } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
 
@@ -16,7 +15,7 @@ const BottomNav = async () => {
   ])
 
   return (
-    <nav className="lg:hidden fixed bottom-0 left-1 right-1 z-40 flex h-16 items-stretch rounded-t-3xl border-x border-t border-ui-border-base bg-ui-bg-base [&_svg]:size-5">
+    <nav className="store-chrome lg:hidden fixed bottom-0 left-1 right-1 z-40 flex h-16 items-stretch rounded-t-3xl border-x border-t border-ui-border-base bg-ui-bg-base [&_svg]:size-5">
       <div className="flex flex-1 items-center justify-center">
         <CategoryMenu
           categories={categories}
@@ -30,7 +29,7 @@ const BottomNav = async () => {
 
       <div className="flex flex-1 items-center justify-center">
         <Link href="/" aria-label={SITE_NAME}>
-          <Image src="/medusa.svg" alt="" width={24} height={26} priority />
+          <House className="text-ui-fg-interactive" />
         </Link>
       </div>
 

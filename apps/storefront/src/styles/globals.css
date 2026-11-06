@@ -8,14 +8,112 @@
 }
 
 
-/*
- * Medusa's default --fg-interactive (blue-500) only reaches 3.67:1 on white,
- * below the 4.5:1 WCAG AA threshold for body-size text. Shift the pair one
- * step darker: blue-600 (5.17:1) with blue-700 for hover.
- */
-:root {
-  --fg-interactive: rgba(37, 99, 235, 1);
-  --fg-interactive-hover: rgba(29, 78, 216, 1);
+/* Shared emerald, gold and ivory tokens for every storefront surface. */
+:root[data-mode="light"] {
+  --store-emerald: #073e36;
+  --store-gold: #d8b875;
+  --store-ivory: #fff8e7;
+  --bg-base: #fffdf7;
+  --bg-base-hover: #f5efdf;
+  --bg-base-pressed: #eae1cb;
+  --bg-subtle: #f6f0e3;
+  --bg-subtle-hover: #eee5d2;
+  --bg-subtle-pressed: #e6d9bd;
+  --bg-component: #f8f3e8;
+  --bg-component-hover: #eee5d2;
+  --bg-component-pressed: #e6d9bd;
+  --bg-field: #fffdf7;
+  --bg-field-hover: #f5efdf;
+  --bg-field-component: #fffdf7;
+  --bg-highlight: #e6f1e9;
+  --bg-highlight-hover: #d5e7db;
+  --bg-interactive: #145b4b;
+  --bg-overlay: rgba(3, 36, 29, 0.5);
+  --fg-base: #173e34;
+  --fg-subtle: #466457;
+  --fg-muted: #637165;
+  --fg-interactive: #14614d;
+  --fg-interactive-hover: #073e36;
+  --border-base: #e4d5b6;
+  --border-strong: #bc9b5c;
+  --border-interactive: #97722e;
+  --button-inverted: #073e36;
+  --button-inverted-hover: #145b4b;
+  --button-inverted-pressed: #032d26;
+  --button-neutral: #fff8e7;
+  --button-neutral-hover: #f4e8cc;
+  --button-neutral-pressed: #ead9b1;
+  --button-transparent-hover: #f0e7d4;
+  --button-transparent-pressed: #e7dabd;
+  --contrast-bg-base: #073e36;
+  --contrast-bg-base-hover: #145b4b;
+  --contrast-bg-base-pressed: #032d26;
+  --contrast-bg-subtle: #145b4b;
+  --contrast-fg-primary: #fff8e7;
+  --tag-neutral-bg: #f1e8d4;
+  --tag-neutral-bg-hover: #e9d9b8;
+  --tag-neutral-text: #526044;
+  --borders-focus: 0 0 0 1px #fffdf7, 0 0 0 3px #97722e;
+  --borders-interactive-with-active: 0 0 0 1px #97722e, 0 0 0 4px rgb(216 184 117 / 25%);
+  --buttons-inverted-focus: 0 0 0 2px #fffdf7, 0 0 0 4px #97722e;
+  --buttons-neutral-focus: 0 0 0 2px #fffdf7, 0 0 0 4px #97722e;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--fg-base);
+}
+
+::selection {
+  background: #ead09b;
+  color: #073e36;
+}
+
+/* Dark framing also supplies matching colors to nested menus and controls. */
+.store-chrome {
+  --bg-base: #073e36;
+  --bg-base-hover: #145b4b;
+  --bg-base-pressed: #032d26;
+  --bg-subtle: #114d40;
+  --bg-component: #114d40;
+  --bg-component-hover: #1b5b4b;
+  --bg-field: #114d40;
+  --bg-field-hover: #1b5b4b;
+  --fg-base: #fff8e7;
+  --fg-subtle: #e0d9bf;
+  --fg-muted: #c3cdb8;
+  --fg-interactive: #ead09b;
+  --fg-interactive-hover: #fff1c9;
+  --border-base: #577255;
+  --border-strong: #d8b875;
+  --button-neutral: #114d40;
+  --button-neutral-hover: #1b5b4b;
+  background-color: #073e36;
+  color: #fff8e7;
+}
+
+.store-footer {
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 38px, rgb(216 184 117 / 4%) 39px, transparent 40px);
+  border-top: 1px solid #d8b875;
+}
+
+.store-product-card {
+  border: 1px solid var(--border-base);
+  border-radius: 1.5rem;
+  background: var(--bg-base);
+  padding: 0.75rem;
+  height: 100%;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.group:hover .store-product-card,
+.group:focus-visible .store-product-card {
+  border-color: #bc9b5c;
+  box-shadow: 0 8px 24px rgb(7 62 54 / 8%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .store-product-card { transition: none; }
 }
 
 @layer utilities {
@@ -116,27 +214,21 @@
   }
 
   .contrast-btn {
-    @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+    @apply px-4 py-2 border border-ui-border-strong rounded-full hover:bg-ui-button-inverted hover:text-ui-contrast-fg-primary transition-colors duration-200 ease-in;
   }
 
   .txt-compact-2xsmall-plus {
     font-size: 0.6875rem; /* 11px */
     line-height: 1.25rem; /* 20px */
     font-weight: 500;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: var(--font-iransansx), Tahoma, sans-serif;
   }
 
   .txt-compact-2xsmall {
     font-size: 0.6875rem; /* 11px */
     line-height: 1.25rem; /* 20px */
     font-weight: 400;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: var(--font-iransansx), Tahoma, sans-serif;
   }
 
   .text-xsmall-regular {

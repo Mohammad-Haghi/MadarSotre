@@ -75,6 +75,7 @@ module.exports = defineConfig({
     databaseDriverOptions: { connection: { ssl: false } },
     redisUrl: useRedis ? redisUrl : undefined,
     http: {
+      authMethodsPerActor: { customer: ["usernamepass"], user: ["emailpass"] },
       storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
       authCors: process.env.AUTH_CORS!,
@@ -102,7 +103,16 @@ module.exports = defineConfig({
     },
   ],
   modules: [
-    { resolve: "@medusajs/medusa/translation" },
+    {
+      resolve: "@medusajs/medusa/auth",
+      options: {
+        providers: [
+          { resolve: "@medusajs/medusa/auth-emailpass", id: "emailpass" },
+          { resolve: "./src/modules/username-auth", id: "usernamepass" },
+        ],
+      },
+    },
+    { resolve: "./src/modules/persian-translation" },
     {
       resolve: "@medusajs/medusa/notification",
       options: {

@@ -16,7 +16,16 @@ export const listRegions = async () => {
       next,
       cache: "force-cache",
     })
-    .then(({ regions }) => regions)
+    .then(({ regions }) =>
+      regions
+        .filter((region) =>
+          region.countries?.some((country) => country.iso_2 === "ir")
+        )
+        .map((region) => ({
+          ...region,
+          countries: region.countries?.filter((country) => country.iso_2 === "ir"),
+        }))
+    )
 }
 
 export const retrieveRegion = async (id: string) => {
@@ -52,7 +61,7 @@ export const getRegion = async (countryCode: string) => {
     })
   })
 
-  const region = countryCode ? regionMap.get(countryCode) : regionMap.get("ru")
+  const region = countryCode ? regionMap.get(countryCode) : regionMap.get("ir")
 
   return region
 }

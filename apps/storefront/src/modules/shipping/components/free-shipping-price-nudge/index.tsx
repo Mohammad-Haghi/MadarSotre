@@ -164,7 +164,7 @@ function FreeShippingInline({
             })}
           >
             Only{" "}
-            <span className="text-neutral-950">
+            <span className="text-ui-fg-base">
               {convertToLocale({
                 amount: price.target_remaining,
                 currency_code: cart.currency_code,
@@ -221,7 +221,7 @@ function FreeShippingPopup({
         </Button>
       </div>
 
-      <div className="w-[400px] bg-black text-white p-6 rounded-lg ">
+      <div className="w-[400px] bg-ui-contrast-bg-base text-ui-contrast-fg-primary p-6 rounded-lg ">
         <div className="pb-4">
           <div className="space-y-3">
             <div className="flex justify-between text-[15px] text-neutral-400">
@@ -276,7 +276,7 @@ function FreeShippingPopup({
           </Link>
 
           <Link
-            className="flex-grow rounded-2xl bg-white text-neutral-950 shadow-none outline-none border-[1px] border-white text-[15px] py-2.5 px-4 text-center"
+            className="flex-grow rounded-2xl bg-ui-bg-base text-ui-fg-base shadow-none outline-none border-[1px] border-white text-[15px] py-2.5 px-4 text-center"
             href="/store"
           >
             View products

@@ -23,7 +23,7 @@ export default async function CheckoutLayout({
 
   return (
     <div className="min-h-screen bg-ui-bg-base flex flex-col">
-      <header className="border-b border-ui-border-base bg-ui-bg-base sticky top-0 z-40">
+      <header className="store-chrome border-b border-ui-border-base bg-ui-bg-base sticky top-0 z-40">
         <div className="flex items-center content-container py-3 h-16">
           <div className="flex flex-1 items-center">
             <Link

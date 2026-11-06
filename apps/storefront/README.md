@@ -51,18 +51,18 @@ Copy [`.env.template`](.env.template) to `.env.local`. `NEXT_PUBLIC_MEDUSA_PUBLI
 |---|---|---|
 | `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` | Publishable API key from the Medusa backend. Required | — |
 | `NEXT_PUBLIC_MEDUSA_BACKEND_URL` | Backend base URL | `http://localhost:9000` |
-| `NEXT_PUBLIC_DEFAULT_REGION` | Country code (ISO 3166-1 alpha-2, lowercase) the middleware falls back to when neither the cookie nor a geo header resolves a region. The template's `en` matches no seeded region, in which case the first region the backend returns wins | `en` |
+| `NEXT_PUBLIC_DEFAULT_REGION` | You use Iran (`ir`) as the only country. The storefront always selects Iran | `ir` |
 | `NEXT_PUBLIC_BASE_URL` | Storefront base URL, used for absolute URLs in metadata, the sitemap, and `llms.txt` | `https://localhost:8000` |
-| `NEXT_PUBLIC_SITE_NAME` | Store name in the header, footer, checkout, `schema.org` markup, and `llms.txt` | `Gorgo Medusa Store` |
+| `NEXT_PUBLIC_SITE_NAME` | Store name in the header, footer, checkout, `schema.org` markup, and `llms.txt` | `فروشگاه مادر` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 measurement ID, `G-XXXXXXXXXX`. Leave empty to ship no analytics at all | — |
 | `NEXT_PUBLIC_STRIPE_KEY` | Stripe publishable key, only needed when paying through Stripe | — |
 | `NEXT_PUBLIC_MEDUSA_PAYMENTS_PUBLISHABLE_KEY` | Medusa Cloud Payments publishable key, used when `NEXT_PUBLIC_STRIPE_KEY` is empty | — |
 | `NEXT_PUBLIC_MEDUSA_PAYMENTS_ACCOUNT_ID` | Connected account that key charges on behalf of, passed to Stripe as `stripeAccount` | — |
 | `NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER` | Address autocomplete provider; `dadata`, or anything else for manual entry | `dadata` |
 | `NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER_API_KEY` | API token for the address autocomplete provider | — |
-| `GEOLOCATION_PROVIDER` | Country detection provider the middleware uses for a first-time visitor; `ip-api`, or anything else to rely on hosting platform geo headers only. Server-side only, so it carries no `NEXT_PUBLIC_` prefix | `ip-api` |
-| `GEOLOCATION_PROVIDER_API_KEY` | API key for the geolocation provider. `ip-api` works without one against its free endpoint, which is HTTP only and non-commercial. A live shop needs a [pro key](https://members.ip-api.com) | — |
-| `GEOLOCATION_DEBUG` | Emit `x-geo-*` response headers explaining how the region was resolved | `false` |
+| `GEOLOCATION_PROVIDER` | Inactive while the storefront uses Iran as its only country | `ip-api` |
+| `GEOLOCATION_PROVIDER_API_KEY` | Inactive while the storefront uses Iran as its only country | — |
+| `GEOLOCATION_DEBUG` | Inactive while the storefront uses Iran as its only country | `false` |
 | `REVALIDATE_SECRET` | Shared secret checked on `api/revalidate`; must match the backend's value | `supersecret` |
 | `MEDUSA_CLOUD_S3_HOSTNAME`, `MEDUSA_CLOUD_S3_PATHNAME` | Add the Medusa Cloud bucket to the allowed image hosts | — |
 | `NODE_ENV` | Node environment | `development` |
@@ -77,10 +77,29 @@ Installation, features, deployment, and everything else that spans both apps liv
 
 ## Persian Storefront
 
-You use Persian as the only interface language, with right-to-left layouts and `/fa` routes. The storefront ignores other browser language preferences and redirects old language URLs to Persian. The navigation shows no region or language selector. Country detection continues to resolve the shopping region.
+You use Persian as the only interface language, with right-to-left layouts and `/fa` routes. The storefront ignores other browser language preferences and redirects old language URLs to Persian. The navigation shows no region or language selector. You always shop in Iran, regardless of your location or a previous country cookie.
 
-You maintain interface text in `messages/fa.json`. Other catalogs remain in the repository as reference files and are unavailable through storefront routes.
+You maintain interface text in `messages/fa.json`. You keep only the Persian catalog.
 
 ## Local Font
 
 You use the bundled IRANSansX variable web font for interface text and controls. You keep its font file in `src/assets/fonts`. The root layout loads and preloads it through `next/font/local`, and Tailwind uses the same family.
+
+
+## Persian And Iran Configuration
+
+You use Persian as the only storefront and Admin interface language and Iran as the only sales region. Fresh databases seed Persian and the Iranian rial.
+
+For an existing database, run `npm run configure:persian` from `apps/backend`. This removes other regions and catalog locales, restricts store currencies to the Iranian rial, and adds Persian catalog translations. Restart both apps afterward.
+
+
+## Customer Login
+
+Customers sign in with a username and password. You open the customer account creation page at `/app/customer-accounts` in Admin and enter their Iranian mobile number, username and password. Email is optional and the form does not request it. You can also reach the form from the link above the customer list. Open an existing customer details page to change their credentials. You can change either value there. Leave the password blank to keep it unchanged. Passwords require 8 to 256 characters and you cannot read a saved password.
+
+Usernames accept 3 to 64 letters, digits, dots, hyphens or underscores. The backend trims and normalizes usernames and ignores letter case. You keep customer email addresses for order communication. Customers contact you for an account or a password reset. Admin staff continue to sign in with email and password.
+
+
+## Storefront Theme
+
+You use an emerald, gold and ivory theme throughout the storefront. You set shared Medusa color tokens in `src/styles/globals.css` and the neutral palette in `tailwind.config.js`. The header, footer, mobile navigation and checkout header share the `store-chrome` class. Product previews use `store-product-card`. You edit the homepage banner text in the `Hero` section of `messages/fa.json`.

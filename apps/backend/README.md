@@ -20,7 +20,7 @@
 </h4>
 
 <p align="center">
-  The Medusa application behind <a href="../../README.md">Medusa DTC Starter by Gorgo</a>: Store and Admin APIs, the Admin dashboard, transactional emails, seed data for 241 countries and 36 locales, and the Integration Module for configuring providers without a redeploy.
+  The Medusa application behind <a href="../../README.md">Medusa DTC Starter by Gorgo</a>: Store and Admin APIs, the Admin dashboard, transactional emails, seed data for Iran and Persian, and the Integration Module for configuring providers without a redeploy.
 </p>
 
 <p align="center">
@@ -85,3 +85,21 @@ You enter Persian product names and descriptions in the catalog. Interface langu
 ## Local Font
 
 You use the bundled IRANSansX variable web font for interface text and controls. You keep its font file in `src/admin/assets/fonts` and its CSS in `src/admin/styles.css`. Vite bundles the font with the Admin.
+
+
+## Persian And Iran Configuration
+
+You use Persian as the only storefront and Admin interface language and Iran as the only sales region. Fresh databases seed Persian and the Iranian rial.
+
+You register `src/modules/persian-translation` in `medusa-config.ts` to keep Medusa's translation models and migrations while replacing its default locale loader. The loader keeps only `fa` on every startup, so Medusa does not restore other catalog languages. Check this module against Medusa's module discovery behavior when you upgrade.
+
+For an existing database, run `npm run configure:persian` from `apps/backend`. This removes other regions and catalog locales, restricts store currencies to the Iranian rial, and adds Persian catalog translations. Restart both apps afterward.
+
+
+## Customer Login
+
+Customers sign in with a username and password. You open the customer account creation page at `/app/customer-accounts` in Admin and enter their Iranian mobile number, username and password. Email is optional and the form does not request it. You can also reach the form from the link above the customer list. Open an existing customer details page to change their credentials. You can change either value there. Leave the password blank to keep it unchanged. Passwords require 8 to 256 characters and you cannot read a saved password.
+
+Usernames accept 3 to 64 letters, digits, dots, hyphens or underscores. The backend trims and normalizes usernames and ignores letter case. You keep customer email addresses for order communication. Customers contact you for an account or a password reset. Admin staff continue to sign in with email and password.
+
+You can verify username login, credential changes and validation with `npx medusa exec ./src/migration-scripts/check-username-auth.ts` from `apps/backend`. The script creates temporary customers and removes them afterward.

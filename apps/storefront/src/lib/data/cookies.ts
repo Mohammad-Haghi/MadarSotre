@@ -88,16 +88,9 @@ export const getPromoBannerDismissed = async (): Promise<boolean> => {
   }
 }
 
-export const getCountryCode = async (): Promise<string | null> => {
-  try {
-    const cookies = await nextCookies()
-    return cookies.get(COOKIE_NAMES.country)?.value ?? null
-  } catch {
-    return null
-  }
-}
+export const getCountryCode = async (): Promise<string | null> => "ir"
 
-export const setCountryCode = async (countryCode: string) => {
+export const setCountryCode = async (_countryCode: string) => {
   const cookies = await nextCookies()
-  cookies.set(COOKIE_NAMES.country, countryCode, persistentCookieOpts)
+  cookies.set(COOKIE_NAMES.country, "ir", persistentCookieOpts)
 }

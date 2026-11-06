@@ -20,7 +20,7 @@
 </h4>
 
 <p align="center">
-  A production-ready <a href="https://medusajs.com/">Medusa</a> starter for direct-to-consumer commerce with a Medusa backend, a Persian Next.js storefront, a conversion-focused checkout, 241 countries, transactional emails, SEO with an <code>llms.txt</code> endpoint, and integrations you configure straight from the Medusa Admin.
+  A production-ready <a href="https://medusajs.com/">Medusa</a> starter for direct-to-consumer commerce with a Medusa backend, a Persian Next.js storefront, a conversion-focused checkout, Iran, transactional emails, SEO with an <code>llms.txt</code> endpoint, and integrations you configure straight from the Medusa Admin.
 </p>
 
 <p align="center">
@@ -53,15 +53,15 @@ Everything the official [Medusa DTC Starter](https://github.com/medusajs/dtc-sta
 
 - **Conversion-focused checkout** – contacts, address, shipping, and payment open as sheets over one screen, with cart totals and promotion codes alongside. The design borrows from the [Yandex KIT](https://kit.yandex.ru) checkout, and every field can be removed or added.
 - **Address autocomplete** – the address field suggests options as you type and fills in postal code, city, and region. [DaData](https://dadata.ru/?ref=276331) ships built in, any other provider plugs into the same interface, and the buyer can always switch to manual entry. See [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete).
-- **Full localization** – [a Persian storefront](apps/storefront/src/i18n/config.ts) with RTL support, [241 seeded countries](apps/backend/src/migration-scripts/data/regions/json) for sales regions, each with its own currency and shipping options, and [emails in all 36 languages](apps/backend/src/emails/i18n/messages).
-- **Automatic country detection** – a first-time visitor lands in the region their country belongs to, resolved from the hosting platform's geo headers or from their IP. See [Set Up Country Detection](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-country-detection).
+- **Full localization** – [a Persian storefront](apps/storefront/src/i18n/config.ts) with RTL support, [Iran as the only seeded country](apps/backend/src/migration-scripts/data/regions/json) for sales regions, each with its own currency and shipping options, and [emails in all 36 languages](apps/backend/src/emails/i18n/messages).
+- **Iran region** ? you shop in Iran using the Iranian rial. The storefront always selects Iran, including when you visit from another country.
 - **Catalog search** – instant product search with highlighted matches, ready to swap for a dedicated engine such as [Meilisearch](https://www.meilisearch.com/).
 - **Filterable catalog** – option filters, sorting, a category and subcategory sidebar, and a bottom sheet on mobile, with the selection kept in the URL so it can be shared as a link. The design borrows from the catalog of fashion brand [12 STOREEZ](https://12storeez.store).
-- **Password reset** – a single-use link from the sign-in page, and the request answers the same way whether or not the address is registered.
+- **Customer access** ? customers sign in with a username and password. You create customers with a mobile number, username and password at `/app/customer-accounts` in Admin. You manage saved credentials on the customer details page.
 - **Transactional emails** – [React Email](https://react.email/) templates over SMTP, covering a new account, a password reset, an order and every status it passes through, a captured payment, and more. Every email reaches the buyer in the language they shopped in, and the Admin's "do not notify" checkbox is respected.
 - **On-demand cache revalidation** – a backend subscriber posts a webhook to the storefront on every catalog and translation event, and the storefront revalidates exactly the affected pages.
 - **[Integration Module](https://docs.gorgojs.com/medusa-modules/integration)** – payment, fulfillment, and ERP providers are configured under **Settings → Integrations** in the Admin, with no `medusa-config` edits and no redeploys.
-- **SEO and AI optimization** – canonical URLs and hreflang alternates for all 36 locales, a sitemap covering every catalog URL, `robots.txt`, Open Graph and Twitter images, and an [`llms.txt`](https://dtc-starter-demo.gorgojs.com/llms.txt) endpoint for AI crawlers. The demo storefront scores 100 in every PageSpeed Insights category on mobile.
+- **SEO and AI optimization** – canonical URLs and hreflang alternates for Persian, a sitemap covering every catalog URL, `robots.txt`, Open Graph and Twitter images, and an [`llms.txt`](https://dtc-starter-demo.gorgojs.com/llms.txt) endpoint for AI crawlers. The demo storefront scores 100 in every PageSpeed Insights category on mobile.
 
 ## Repository Structure
 
@@ -165,7 +165,7 @@ The storefront needs at least `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY`. Both apps do
 
 `pnpm backend:seed` from the repository root, or `pnpm seed` from `apps/backend`, seeds the store from JSON files under [`apps/backend/src/migration-scripts/data/`](apps/backend/src/migration-scripts/data), one file per region, one per locale, plus the demo catalog and shipping options.
 
-The script skips everything when the sales channel from `data/store/json/store.json` already exists, so edits to the data files take effect on a fresh database. Trim the 241 regions down to your real markets and replace the demo catalog before launch. See [Customize Seed Data](https://docs.gorgojs.com/tools/medusa-dtc-starter/customize-seed-data) for the file formats.
+The script skips everything when the sales channel from `data/store/json/store.json` already exists, so edits to the data files take effect on a fresh database. You seed only Iran, the Iranian rial and Persian catalog translations. Replace the demo catalog before launch. See [Customize Seed Data](https://docs.gorgojs.com/tools/medusa-dtc-starter/customize-seed-data) for the file formats.
 
 ## Add Integrations
 
@@ -217,4 +217,11 @@ MIT — see [LICENSE](LICENSE).
 
 You use Persian as the only storefront and Admin interface language. The storefront uses `/fa` routes and right-to-left layouts. Old language links redirect to their Persian equivalents.
 
-You manage product names and descriptions in Medusa Admin. Existing catalog records and the multilingual demo seed retain their original content. Enter Persian content for your live catalog.
+You manage product names and descriptions in Medusa Admin. The demo seed includes Persian catalog translations. Existing catalog records retain their base content. Enter Persian content for your live catalog.
+
+
+## Persian And Iran Configuration
+
+You use Persian as the only storefront and Admin interface language and Iran as the only sales region. Fresh databases seed Persian and the Iranian rial.
+
+For an existing database, run `npm run configure:persian` from `apps/backend`. This removes other regions and catalog locales, restricts store currencies to the Iranian rial, and adds Persian catalog translations. Restart both apps afterward.

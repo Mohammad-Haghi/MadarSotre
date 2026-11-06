@@ -290,7 +290,8 @@ Split a formatting pass out of a substantive change, always.
 These rules cover the English prose in this repository, meaning the READMEs, the code comments, the
 `.env.template` annotations and the storefront's `en.json` strings.
 
-- Active voice and second person. "You set `DATABASE_URL`", not "`DATABASE_URL` is set".
+- Active voice and second person. 
+- "You set `DATABASE_URL`", not "`DATABASE_URL` is set".
 - No em dashes in prose, and no asides set off with a pair of them. Split the sentence instead.
 - A colon only before a list broken out onto its own lines, never inside a running sentence.
 - Drop "under the hood", "simply", "just", "easy" and "obviously" rather than rephrasing them.
